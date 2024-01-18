@@ -106,9 +106,7 @@ input:focus {
     text-decoration: none;
 }
 
-/* ------icon css------------ */
-
-
+/* ----- icon css------ */
 .form-control {
     padding-bottom: 14px;
     position: relative;
@@ -150,6 +148,7 @@ input:focus {
     display: block;
 }
 
+/* -----------------media query for phone screen-------------- */
 
 @media only screen and (max-width: 375px) {
     body {
@@ -169,7 +168,7 @@ input:focus {
     }
 
     .left-text {
-        max-width: 375px; /* Set a maximum width for the form */ 
+        max-width: 375px;
         margin: 0px;
         padding: 0px;
     }
@@ -192,7 +191,7 @@ input:focus {
         padding: 30px;
         padding-top: 33px;
         border-radius: 8px;
-        max-width: 375px; /* Set a maximum width for the form */
+        max-width: 375px;
         margin: 0 auto; 
     }
 
@@ -219,7 +218,7 @@ input:focus {
 
     input {
         display: block;
-        width: 100%; /* Set the width to 100% */
+        width: 100%; 
         max-width: 300px;
         padding: 13px;
         margin-bottom: 15px;
@@ -237,4 +236,148 @@ input:focus {
         padding: 10px;
     }
     
+}
+
+
+/* ----------------media query for small tablet screen------------- */
+
+@media (max-width: 768px) {
+    br {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 55px 30px 55px 30px;
+    }
+
+    .left-text {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    h1 {
+        padding-bottom: 7px;
+        font-size: 30px;
+    }
+    
+    .left-text p {
+        line-height: 24px;
+        font-size: 17px;
+        margin: 0px;
+    }
+
+    form {
+        background-color: #fff;
+        width: 100%;
+        max-width: 768px;
+        height: fit-content;
+        padding: 30px;
+        padding-top: 33px;
+        border-radius: 8px;
+        box-shadow: 0px 6px 2px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    .right-side {
+        margin-top: 3rem;
+    }
+    
+    .right-side button {
+        padding: 14px;
+        width: 100%;
+        max-width: 768px;
+        margin-bottom: 20px;
+        background: hsl(248, 32%, 49%);
+        color: #fff;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 14px;
+        border: 1px solid hsl(248, 32%, 49%);
+        box-shadow: 0px 6px 2px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+
+    .link-text {
+        font-size: 10px;
+        text-align: center;
+        color: hsl(246, 25%, 77%);
+        padding: 10px;
+    }
+}
+
+/* ------------------Media query for iPad screens------------------ */
+@media (min-width: 769px) and (max-width: 1024px) {
+    br {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        flex-basis: 100%;
+    }
+    
+    h1 {
+        padding-bottom: 30px;
+        font-size: 40px;
+        line-height: 45px;
+    }
+    
+    .left-text p {
+        font-size: 17px;
+        margin: 0px 0px 0px 0px;
+    }
+    
+    .left-text {
+        color: #fff;
+        padding-left: 3rem;
+        padding-top: 15rem;
+        flex-basis: 50%;
+    }
+    
+    form {
+        background-color: #fff;
+        flex-basis: 50%;
+        width: 122%;
+        height: fit-content;
+        padding: 30px;
+        padding-top: 33px;
+        border-radius: 8px;
+        box-shadow: 0px 6px 2px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    .right-side {
+        margin-top: 10rem;
+    }
+    
+    .right-side button {
+        padding: 14px;
+        width: 122%;
+        margin-bottom: 20px;
+        background: hsl(248, 32%, 49%);
+        color: #fff;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 14px;
+        border: 1px solid hsl(248, 32%, 49%);
+        box-shadow: 0px 6px 2px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    button small {
+        font-size: 12px;
+        font-weight: 100;
+    }
+    
+    input {
+        display: block;
+        width: 100%;
+        padding: 13px;
+        margin-bottom: 15px;
+        padding-left: 22px;
+        font-weight: 700;
+        border: 1px solid hsl(246, 25%, 90%);
+        border-radius: 4px;
+        height: 50px;
+    }
 }
