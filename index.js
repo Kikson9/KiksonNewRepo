@@ -15,10 +15,10 @@ form.addEventListener("submit", (e) => {
 
 function checkInputs() {
     // get the values from the inputs
-    const firstnameValue = firstname.value.trim();
-    const lastnameValue = lastname.value.trim();
-    const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
+    let firstnameValue = firstname.value.trim();
+    let lastnameValue = lastname.value.trim();
+    let emailValue = email.value.trim();
+    let passwordValue = password.value.trim();
 
     // const allValid = true;
 
@@ -54,6 +54,25 @@ function checkInputs() {
     } else {
         // add success class
         setSuccessfor(password);
+    }
+
+    if (firstnameValue && lastnameValue && passwordValue && isEmail(emailValue)) {
+        setTimeout(function () {
+          const form = document.getElementById("form");
+          form.reset();
+          firstnameValue = "";
+          lastnameValue = "";
+          passwordValue = "";
+          emailValue = "";
+    
+          const inputs = form.querySelectorAll("input");
+          console.log([...inputs][0].classList);
+          [...inputs].forEach(function(input) {
+            input.parentElement.classList.remove("success");
+          })
+        }, 2000);
+    
+        console.log("Form submitted successfully!");
     }
 
     // if (allValid) {
